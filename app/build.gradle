@@ -7,8 +7,8 @@ plugins {
     id "dagger.hilt.android.plugin"
 }
 
-def keystoreProperties = new Properties()
-keystoreProperties.load(new FileInputStream(rootProject.file("keystore.properties")))
+// def keystoreProperties = new Properties()
+// keystoreProperties.load(new FileInputStream(rootProject.file("keystore.properties")))
 
 android {
 
@@ -19,14 +19,14 @@ android {
         generateLocaleConfig true
     }
 
-    signingConfigs {
-        release {
-            storeFile file(keystoreProperties["storeFile"])
-            storePassword keystoreProperties["storePassword"]
-            keyAlias keystoreProperties["keyAlias"]
-            keyPassword keystoreProperties["keyPassword"]
-        }
-    }
+ //   signingConfigs {
+//        release {
+     //       storeFile file(keystoreProperties["storeFile"])
+ //           storePassword keystoreProperties["storePassword"]
+  //          keyAlias keystoreProperties["keyAlias"]
+     //       keyPassword keystoreProperties["keyPassword"]
+  //      }
+   // }
 
     defaultConfig {
         applicationId "com.acszo.redomi"
